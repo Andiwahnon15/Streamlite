@@ -1,7 +1,7 @@
 # backend.py
 import pandas as pd
 import matplotlib.pyplot as plt
-
+@st.cache
 def load_data():
     data = pd.read_csv("https://raw.githubusercontent.com/data-bootcamp-v4/data/main/supermarket_sales.csv")
     data['Date'] = pd.to_datetime(data['Date'])
